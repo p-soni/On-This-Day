@@ -1,0 +1,6 @@
+framework module Pods_final_project_s17_empire {
+  umbrella header "Pods-final-project-s17-empire-umbrella.h"
+
+  export *
+  module * { export * }
+}

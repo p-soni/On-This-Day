@@ -1,0 +1,25 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+#source 'https://github.com/CocoaPods/Specs.git'
+#target 'final-project-s17-empire' do
+ # pod 'GooglePlaces'
+ # pod 'GoogleMaps'
+#end
+
+target 'final-project-s17-empire' do
+  use_frameworks!
+  pod ‘GooglePlaces’
+  pod ‘GoogleMaps’
+  pod 'JTAppleCalendar', '~> 7.0'
+  target 'final-project-s17-empireTests' do
+    inherit! :search_paths
+  end
+
+  target 'final-project-s17-empireUITests' do
+    inherit! :search_paths
+  end
+
+
+
+end

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16A323" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Day" representedClassName="Day" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="hasMoments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Moment" inverseName="dayM" inverseEntity="Moment" syncable="YES"/>
+        <relationship name="hasPlaces" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Places" inverseName="dayPlace" inverseEntity="Places" syncable="YES"/>
+    </entity>
+    <entity name="Moment" representedClassName="Moment" syncable="YES" codeGenerationType="class">
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="dayM" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Day" inverseName="hasMoments" inverseEntity="Day" syncable="YES"/>
+    </entity>
+    <entity name="Places" representedClassName="Places" syncable="YES" codeGenerationType="class">
+        <attribute name="loc" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="dayPlace" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Day" inverseName="hasPlaces" inverseEntity="Day" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Day" positionX="-315" positionY="-162" width="128" height="90"/>
+        <element name="Moment" positionX="-27" positionY="-118" width="128" height="73"/>
+        <element name="Picture" positionX="-387" positionY="131" width="128" height="75"/>
+        <element name="Places" positionX="-180" positionY="102" width="128" height="73"/>
+    </elements>
+</model>
